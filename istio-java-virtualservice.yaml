@@ -1,0 +1,19 @@
+---
+apiVersion: "networking.istio.io/v1alpha3"
+kind: "VirtualService"
+metadata:
+  annotations: {}
+  labels: {}
+  name: "ballerina-time-service"
+spec:
+  hosts:
+  - "*"
+  http:
+  - match:
+    - uri:
+        MatchType: "/dfdf"
+    route:
+    - destination:
+        host: "ballerina-time-service"
+        port:
+          Port: "9095"
